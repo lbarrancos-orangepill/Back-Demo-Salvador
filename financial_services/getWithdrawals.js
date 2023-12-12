@@ -10,7 +10,7 @@ async function getWithdrawals() {
   const userApiKey = getUniqueUserApiKey();
 
   if (existingIdentityId) {
-    const apiUrl = `https://api.orangepill.cloud/v1/transactions/all?scope=-own,all&query={"type":"withdrawal","destination.holder":"${existingIdentityId}"}`;
+    const apiUrl = `https://api.orangepill.cloud/v1/transactions/all?scope=-own,all&query={"type":"withdrawal","source.holder":"${existingIdentityId}"}`;
 
     const fetchOptions = {
       method: 'GET',
